@@ -15,6 +15,7 @@ class PropertyPageTag(TaggedItemBase):
 
 
 class PropertyPage(Page):
+    parent_page_types = ["home.HomePage"]
     address = models.CharField(max_length=200)
     state = models.CharField(max_length=20)
     lga = models.CharField(max_length=50)
