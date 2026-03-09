@@ -24,9 +24,6 @@ class PropertyPageTag(TaggedItemBase):
 
 
 class PropertyPage(Page):
-    main_image = models.ForeignKey(
-        "wagtailimages.Image", on_delete=models.PROTECT, related_name="+"
-    )
     address = models.CharField(max_length=200)
     state = models.CharField(max_length=20)
     lga = models.CharField(max_length=50)
@@ -36,6 +33,11 @@ class PropertyPage(Page):
     offer = models.CharField(max_length=50)
     price = models.BigIntegerField()
     tags = ClusterTaggableManager(through=PropertyPageTag, blank=True)
+
+    def main_image(self):
+        gallery_image = self.gallery_images.first()
+        if gallery_image:
+            return gallery_image.image
 
     content_panels = Page.content_panels + [
         MultiFieldPanel(["address", "state", "lga"], heading="Property location"),
@@ -48,7 +50,7 @@ class PropertyPage(Page):
 
 class PropertyImageGallery(Orderable):
     page = ParentalKey(
-        PropertyPage, on_delete=models.PROTECT, related_name="extra_images"
+        PropertyPage, on_delete=models.PROTECT, related_name="gallery_images"
     )
     image = models.ForeignKey(
         "wagtailimages.Image", on_delete=models.PROTECT, related_name="+"
