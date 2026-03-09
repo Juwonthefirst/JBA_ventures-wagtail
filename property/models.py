@@ -1,5 +1,6 @@
 from django.db import models
 from wagtail.models import Page, Orderable
+from wagtail.blocks import CharBlock
 from wagtail.fields import RichTextField, StreamField
 from wagtail.admin.panels import MultiFieldPanel
 from modelcluster.fields import ParentalKey
@@ -20,7 +21,7 @@ class PropertyPage(Page):
     state = models.CharField(max_length=20)
     lga = models.CharField(max_length=50)
     description = RichTextField()
-    benefits = StreamField([("benefit", models.CharField(max_length=100))], blank=True)
+    benefits = StreamField([("benefit", CharBlock())], blank=True)
     type = models.CharField(max_length=50)
     offer = models.CharField(max_length=50)
     price = models.BigIntegerField()
