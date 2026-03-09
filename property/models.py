@@ -1,7 +1,6 @@
 from django.db import models
 from wagtail.models import Page, Orderable
-from django.contrib.postgres.fields import ArrayField
-from wagtail.fields import RichTextField
+from wagtail.fields import RichTextField, StreamField
 from wagtail.admin.panels import MultiFieldPanel
 from modelcluster.fields import ParentalKey
 from modelcluster.contrib.taggit import ClusterTaggableManager
@@ -21,7 +20,7 @@ class PropertyPage(Page):
     state = models.CharField(max_length=20)
     lga = models.CharField(max_length=50)
     description = RichTextField()
-    benefits = ArrayField(models.CharField(max_length=150), default=list)
+    benefits = StreamField([("benefit", models.CharField(max_length=100))], blank=True)
     type = models.CharField(max_length=50)
     offer = models.CharField(max_length=50)
     price = models.BigIntegerField()
