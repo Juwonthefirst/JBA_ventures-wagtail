@@ -3,6 +3,7 @@ from wagtail.models import Page, Orderable
 from wagtail.blocks import CharBlock
 from wagtail.fields import RichTextField, StreamField
 from wagtail.admin.panels import MultiFieldPanel
+from wagtail.search import index
 from modelcluster.fields import ParentalKey
 from modelcluster.contrib.taggit import ClusterTaggableManager
 from taggit.models import TaggedItemBase
@@ -38,6 +39,11 @@ class PropertyPage(Page):
             ["description", "benefits", "type"], heading="Property details"
         ),
         MultiFieldPanel(["offer", "price"], heading="Property pricing"),
+    ]
+
+    search_fields = Page.search_fields + [
+        index.SearchField("description"),
+        index.SearchField("benefits"),
     ]
 
 
