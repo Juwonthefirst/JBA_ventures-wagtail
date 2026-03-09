@@ -8,15 +8,6 @@ from modelcluster.contrib.taggit import ClusterTaggableManager
 from taggit.models import TaggedItemBase
 
 
-class PropertyIndexPage(Page):
-    hero_image = models.ForeignKey(
-        "wagtailimages.Image", on_delete=models.PROTECT, related_name="+"
-    )
-    hero_text = models.CharField(max_length=120)
-
-    content_panels = Page.content_panels + ["hero_image", "hero_text"]
-
-
 class PropertyPageTag(TaggedItemBase):
     content_object = ParentalKey(
         "PropertyPage", on_delete=models.CASCADE, related_name="tagged_property"
