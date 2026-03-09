@@ -27,6 +27,9 @@ RUN apt-get update --yes --quiet && apt-get install --yes --quiet --no-install-r
 # Install uv.
 RUN pip install --no-cache-dir uv
 
+# Install the application server.
+RUN uv add "gunicorn==20.0.4"
+
 # Copy dependency files.
 COPY pyproject.toml uv.lock* ./
 
@@ -56,4 +59,4 @@ RUN uv run manage.py collectstatic --noinput --clear
 #   PRACTICE. The database should be migrated manually or using the release
 #   phase facilities of your hosting platform. This is used only so the
 #   Wagtail instance can be started with a simple "docker run" command.
-CMD set -xe; uv run manage.py migrate --noinput && exec gunicorn mysite.wsgi:application
+CMD set -xe; uv run manage.py migrate --noinput && exec uv run gunicorn mysite.wsgi:application
