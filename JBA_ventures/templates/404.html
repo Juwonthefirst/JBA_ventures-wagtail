@@ -2,10 +2,25 @@
 
 {% block title %}Page not found{% endblock %}
 
-{% block body_class %}template-404{% endblock %}
+{% block main_class %}{% endblock %}
 
 {% block content %}
-<h1>Page not found</h1>
-
-<h2>Sorry, this page could not be found.</h2>
+<main class="flex flex-col items-center w-full p-18 h-screen">
+    <h1 class="text-2xl lg:text-3xl font-semibold text-accent mt-4">
+      404
+    </h1>
+    <p class="text-3xl lg:text-5xl mt-4 border-b-2 font-bold text-center border-accent pb-8">
+      This page does not exist
+    </p>
+    <p class="pt-4 opacity-70 text-sm md:text-lg text-center">
+      Sorry, the page you are looking for doesn't exist
+    </p>
+    <a
+      class="text-accent underline underline-offset-2 mt-16 flex gap-1 items-center"
+      href="/"
+    >
+      {% comment %} <ArrowLeft size={18} /> {% endcomment %}
+      Back home 
+    </a>
+  </main>
 {% endblock %}

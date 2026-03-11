@@ -7,6 +7,7 @@ from wagtail.search import index
 from modelcluster.fields import ParentalKey
 from modelcluster.contrib.taggit import ClusterTaggableManager
 from taggit.models import TaggedItemBase
+import os
 
 
 class PropertyPageTag(TaggedItemBase):
@@ -32,6 +33,11 @@ class PropertyPage(Page):
         gallery_image = self.gallery_images.first()
         if gallery_image:
             return gallery_image.image
+
+    def get_context(self, request, *args, **kwargs):
+        context = super().get_context(request, *args, **kwargs)
+        context["whatsapp_link"] = os.getenv("WHATSAPP_LINK")
+        return context
 
     content_panels = Page.content_panels + [
         MultiFieldPanel(["address", "state", "lga"], heading="Property location"),

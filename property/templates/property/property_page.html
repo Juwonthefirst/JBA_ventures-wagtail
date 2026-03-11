@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags wagtailimages_tag %}
+{% block body_class %}propertypage-template{% endblock %}
+
+{% block content %}
+<main class="flex flex-col lg:flex-row gap-4 lg:items-center lg:h-screen lg:p-4 dark:text-white">
+    {% comment %} <MediaCarousel
+      urls={[
+        data.main_image,
+        ...data.extra_media.map((media) => media.media),
+      ]}
+    /> {% endcomment %}
+
+    <section class="flex flex-col gap-4 p-4 pt-0 lg:mt-4 overflow-y-auto lg:h-full">
+      <h2 class="text-2xl">₦{{ page.price }}</h2>
+      <div class="flex gap-1 text-sm items-center opacity-80">
+        {% comment %} <MapPin size="16" className="min-h-4 min-w-4" /> {% endcomment %}
+        <p>{{page.address}}, {{page.lga}}, {{page.state}}</p>
+      </div>
+      {% comment %} <TagList tags={data.tags} /> {% endcomment %}
+      <a
+        href="{{page.whatsapp_link}}"
+        class="border-2 border-accent [&:hover,&:active]:bg-accent [&:hover,&:active]:text-white text-sm text-accent px-2 py-1 rounded-md w-fit transition-all"
+      >
+        Contact Agent
+        </a>
+      <section class="mt-6">
+        <h2 class="text-lg font-medium">Description:</h2>
+        <p class="leading-relaxed text-sm opacity-85 ml-2">
+          {{ page.description|richtext }}
+        </p>
+        <h2 class="text-lg mt-6 font-medium">This property includes:</h2>
+        <ul class="list-disc list-inside text-sm space-y-1 p-2 *:opacity-85">
+          {% for benefit in page.benefits %}
+            <li>{{benefit}}</li>
+          {% endfor %}
+        </ul>
+    </section>
+    </section>
+</main>
+  {% endblock %}

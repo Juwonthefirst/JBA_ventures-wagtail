@@ -31,10 +31,10 @@
         {% endblock %}
     </head>
 
-    <body class="{% block body_class %}{% endblock %}">
+    <body class="bg-slate-50 dark:bg-black dark:text-white">
         {% wagtailuserbar %}
-
-        {% block content %}{% endblock %}
+        <main class="{% block main_class %}{% endblock %}">{% block content %}{% endblock %}</main>
+        
 
         {# Global javascript #}
         <script type="text/javascript" src="{% static 'js/JBA_ventures.js' %}"></script>

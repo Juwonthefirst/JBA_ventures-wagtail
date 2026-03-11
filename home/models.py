@@ -5,7 +5,11 @@ from wagtail.models import Page
 
 class HomePage(Page):
     hero_image = models.ForeignKey(
-        "wagtailimages.Image", on_delete=models.PROTECT, related_name="+"
+        "wagtailimages.Image",
+        on_delete=models.SET_NULL,
+        related_name="+",
+        null=True,
+        blank=True,
     )
     hero_text = models.CharField(max_length=120)
 
