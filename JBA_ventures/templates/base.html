@@ -33,7 +33,7 @@
 
     <body class="bg-slate-50 dark:bg-black dark:text-white">
         {% wagtailuserbar %}
-        <main class="{% block main_class %}{% endblock %}">{% block content %}{% endblock %}</main>
+        {% block content %}{% endblock %}
         
 
         {# Global javascript #}
