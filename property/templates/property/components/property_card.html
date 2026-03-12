@@ -10,8 +10,8 @@
           <p>{{property.offer}}</p>
         </div>
       </div>
-      <a href="{% pageurl property %}" class="flex flex-col gap-3">
-        <section>
+      <a href="{% pageurl property %}" >
+        <section class="flex flex-col gap-1">
         <h2 class="text-xl font-medium line-clamp-1">{{property.description|richtext}}</h2>
         <div class="flex gap-1.5 text-sm items-center opacity-80">
           {% comment %} <MapPin size="14" /> {% endcomment %}
@@ -21,6 +21,6 @@
     </section>
     </a>
         <p class="text-2xl font-medium mt-4">
-          ₦{{property.price}}
+          ${{property.price}}
         </p>
 </article>
