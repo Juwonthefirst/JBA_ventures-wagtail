@@ -1,0 +1,9 @@
+<ul class="flex text-xs gap-2">
+  {% for tag in tags%}
+  <li
+    class="flex gap-1 items-center p-1.5 bg-slate-200 rounded-sm dark:bg-zinc-800"
+  >
+    <p>{{tag}}</p>
+  </li>
+  {% endfor %}
+</ul>

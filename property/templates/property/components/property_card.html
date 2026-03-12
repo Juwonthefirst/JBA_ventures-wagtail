@@ -1,0 +1,26 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+
+<article
+      class="flex flex-col gap-2 transition-all dark:text-white md:max-h-1/2 hover:scale-110  group"
+    >
+      <div class="relative">
+        {% image property.main_image original class="rounded-lg h-64 md:h-52  object-cover w-full shadow-lg" %}
+        <div class="flex gap-1 px-2 py-1 items-center absolute bottom-2 left-2 text-sm bg-slate-200 dark:bg-black dark:text-white rounded-md">
+          {% comment %} <Tag size={"14"} /> {% endcomment %}
+          <p>{{property.offer}}</p>
+        </div>
+      </div>
+      <a href="{% pageurl property %}" class="flex flex-col gap-3">
+        <section>
+        <h2 class="text-xl font-medium line-clamp-1">{{property.description|richtext}}</h2>
+        <div class="flex gap-1.5 text-sm items-center opacity-80">
+          {% comment %} <MapPin size="14" /> {% endcomment %}
+          <p>{{property.lga}}, {{property.state}}, {{property.country}}</p>
+        </div>
+        {% include "home/components/tag_list.html" with tags=property.tags.all %}
+    </section>
+    </a>
+        <p class="text-2xl font-medium mt-4">
+          ₦{{property.price}}
+        </p>
+</article>
