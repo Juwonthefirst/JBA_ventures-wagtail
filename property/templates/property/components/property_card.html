@@ -15,7 +15,7 @@
         <h2 class="text-xl font-medium line-clamp-1">{{property.description|richtext}}</h2>
         <div class="flex gap-1.5 text-sm items-center opacity-80">
           {% comment %} <MapPin size="14" /> {% endcomment %}
-          <p>{{property.lga}}, {{property.state}}, {{property.country}}</p>
+          <p>{{property.district}}, {{property.state}}, {{property.country}}</p>
         </div>
         {% include "home/components/tag_list.html" with tags=property.tags.all %}
     </section>

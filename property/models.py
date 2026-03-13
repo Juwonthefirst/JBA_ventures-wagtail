@@ -22,7 +22,7 @@ class PropertyPage(Page):
     address = models.CharField(max_length=200)
     country = models.CharField(max_length=180)
     state = models.CharField(max_length=160)
-    lga = models.CharField(max_length=160)
+    district = models.CharField(max_length=160)
     description = RichTextField()
     benefits = StreamField([("benefit", CharBlock())], blank=True)
     type = models.CharField(max_length=50)
@@ -57,7 +57,7 @@ class PropertyPage(Page):
             heading="Property details",
         ),
         MultiFieldPanel(
-            ["address", "country", "state", "lga"], heading="Property location"
+            ["address", "country", "state", "district"], heading="Property location"
         ),
         MultiFieldPanel(["offer", "price"], heading="Property pricing"),
         FieldPanel(
