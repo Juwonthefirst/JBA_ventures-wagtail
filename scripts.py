@@ -1,7 +1,5 @@
 import subprocess, sys
 
-import test
-
 postgres_file_location = "C:\\Program Files\\PostgreSQL\\17\\data"
 
 
@@ -14,7 +12,7 @@ def run_production_server():
     subprocess.run(["python", "createsuperuser.py"])
     subprocess.run(["python", "manage.py", "migrate"])
     subprocess.run(["python", "manage.py", "collectstatic"])
-    subprocess.run(["gunicorn", "real_estate_api.wsgi:application"])
+    subprocess.run(["gunicorn", "JBA_ventures.wsgi:application"])
 
 
 def make_migrations_and_migrate():
