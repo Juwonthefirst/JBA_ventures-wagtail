@@ -8,6 +8,8 @@ dependencies = [
     "boto3>=1.42.63",
     "dj-database-url>=3.1.2",
     "django-storages>=1.14.6",
+    "gunicorn>=25.1.0",
     "psycopg2>=2.9.11",
     "wagtail>=7.3.1",
+    "whitenoise>=6.12.0",
 ]
