@@ -11,7 +11,7 @@
         ...data.extra_media.map((media) => media.media),
       ]}
     /> {% endcomment %}
-    {% image page.main_image original class="h-72 md:h-84 lg:h-screen w-full lg:w-2/5 lg:p-4 object-cover rounded-lg overflow-hidden" %}
+    {% image page.main_image original class="h-72 md:h-84 lg:h-screen w-full lg:w-2/5 lg:p-4 shrink-0 object-cover rounded-lg overflow-hidden" %}
     <section class="flex flex-col gap-4 p-4 pt-0 lg:mt-4 overflow-y-auto lg:h-full">
       <h2 class="text-2xl">${{ page.price }}</h2>
       <div class="flex gap-1 text-sm items-center opacity-80">
