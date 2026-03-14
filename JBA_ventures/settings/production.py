@@ -35,8 +35,6 @@ CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_SAMESITE = "None"
 SESSION_COOKIE_SAMESITE = "None"
 
-DEBUG = False
-
 MIDDLEWARE.append("whitenoise.middleware.WhiteNoiseMiddleware")
 
 ALLOWED_HOSTS = [
