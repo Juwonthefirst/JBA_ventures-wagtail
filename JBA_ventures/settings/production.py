@@ -1,7 +1,7 @@
 from .base import *
 import os
 
-DEBUG = True
+DEBUG = False
 SECRET_KEY = os.getenv("SECRET_KEY")
 # ManifestStaticFilesStorage is recommended in production, to prevent
 # outdated JavaScript / CSS assets being served from cache
