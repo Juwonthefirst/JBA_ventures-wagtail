@@ -1,10 +1,7 @@
 import subprocess, sys
 
-postgres_file_location = "C:\\Program Files\\PostgreSQL\\17\\data"
-
 
 def run_development_server():
-    subprocess.run(["pg_ctl", "-D", postgres_file_location, "start"])
     subprocess.run(["uv", "run", "manage.py", "runserver", "0.0.0.0:8000"])
 
 
@@ -21,14 +18,6 @@ def make_migrations_and_migrate():
     subprocess.run(["uv", "run", "manage.py", "migrate"])
 
 
-def start_database():
-    subprocess.run(["pg_ctl", "-D", postgres_file_location, "start"])
-
-
-def stop_database():
-    subprocess.run(["pg_ctl", "-D", postgres_file_location, "stop"])
-
-
 def run_tests():
     subprocess.run(["uv", "run", "manage.py", "test", "v1"])
 
@@ -42,9 +31,5 @@ if __name__ == "__main__":
                 run_production_server()
             case "migrate":
                 make_migrations_and_migrate()
-            case "startdb":
-                start_database()
-            case "stopdb":
-                stop_database()
             case "test":
                 run_tests()
