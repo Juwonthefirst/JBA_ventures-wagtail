@@ -6,7 +6,8 @@
       <div class="relative">
         {% image property.main_image original class="rounded-lg h-64 md:h-52  object-cover w-full shadow-lg" %}
         <div class="flex gap-1 px-2 py-1 items-center absolute bottom-2 left-2 text-sm bg-slate-200 dark:bg-black dark:text-white rounded-md">
-          {% comment %} <Tag size={"14"} /> {% endcomment %}
+          {% comment %} Tag icon {% endcomment %}
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tag-icon lucide-tag"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg>
           <p>{{property.offer}}</p>
         </div>
       </div>
@@ -14,7 +15,8 @@
         <section class="flex flex-col gap-1">
         <h2 class="text-xl font-medium line-clamp-1">{{property.description|richtext}}</h2>
         <div class="flex gap-1.5 text-sm items-center opacity-80">
-          {% comment %} <MapPin size="14" /> {% endcomment %}
+          {% comment %} MapPin icon {% endcomment %}
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
           <p>{{property.district}}, {{property.state}}, {{property.country}}</p>
         </div>
         {% include "home/components/tag_list.html" with tags=property.tags.all %}

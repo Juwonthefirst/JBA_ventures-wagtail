@@ -39,7 +39,7 @@
         <button 
           type="button"
           class="carousel-indicator rounded-full transition-all"
-          style="width: 8px; height: 8px; background-color: {% if forloop.first %}white{% else %}rgba(255,255,255,0.5){% endif %}"
+          style="width: 8px; height: 8px; cursor: pointer;"
           onclick="goToSlide({{ forloop.counter0 }})"
           aria-label="Go to slide {{ forloop.counter }}"
           data-index="{{ forloop.counter0 }}">
@@ -71,15 +71,11 @@
 
       indicators.forEach((indicator, index) => {
         if (index === currentSlide) {
-          indicator.classList.add('w-6');
-          indicator.classList.remove('w-2');
-          indicator.classList.remove('bg-white/50');
-          indicator.classList.add('bg-white');
+          indicator.style.width = '24px';
+          indicator.style.backgroundColor = 'white';
         } else {
-          indicator.classList.remove('w-6');
-          indicator.classList.add('w-2');
-          indicator.classList.add('bg-white/50');
-          indicator.classList.remove('bg-white');
+          indicator.style.width = '8px';
+          indicator.style.backgroundColor = 'rgba(255,255,255,0.5)';
         }
       });
     };
