@@ -1,7 +1,6 @@
 {% load wagtailimages_tags %}
 
 <div class="relative w-full h-72 md:h-84 lg:h-screen lg:w-2/5 lg:p-4 shrink-0 rounded-lg group" id="mediaCarousel">
-  <!-- Images Container -->
   <div class="relative w-full h-full overflow-hidden rounded-lg">
     {% for image in images %}
       <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-500 ease-in-out" 
@@ -35,7 +34,6 @@
       </svg>
     </button>
 
-    <!-- Indicators -->
     <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-40 flex gap-2">
       {% for image in images %}
         <button 
