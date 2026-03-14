@@ -1,7 +1,7 @@
 from .base import *
 import os
 
-DEBUG = False
+# DEBUG = False
 
 # ManifestStaticFilesStorage is recommended in production, to prevent
 # outdated JavaScript / CSS assets being served from cache
