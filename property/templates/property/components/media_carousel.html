@@ -1,0 +1,104 @@
+{% load wagtailimages_tags %}
+
+<div class="relative w-full h-72 md:h-84 lg:h-screen lg:w-2/5 lg:p-4 shrink-0 rounded-lg group" id="mediaCarousel">
+  <!-- Images Container -->
+  <div class="relative w-full h-full overflow-hidden rounded-lg">
+    {% for image in images %}
+      <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-500 ease-in-out" 
+           data-index="{{ forloop.counter0 }}" 
+           style="opacity: {% if forloop.first %}1{% else %}0{% endif %}; pointer-events: {% if forloop.first %}auto{% else %}none{% endif %};">
+        {% image image.image original class="w-full h-full object-cover" %}
+      </div>
+    {% endfor %}
+  </div>
+
+  {% if images|length > 1 %}
+    <button 
+      type="button"
+      class="absolute left-2 top-1/2 -translate-y-1/2 z-50 bg-white/30 hover:bg-white/50 text-white rounded-full p-3 transition-all opacity-0 group-hover:opacity-100"
+      style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;"
+      aria-label="Previous slide"
+      onclick="moveSlide(-1)">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </button>
+
+    <button 
+      type="button"
+      class="absolute right-2 top-1/2 -translate-y-1/2 z-50 bg-white/30 hover:bg-white/50 text-white rounded-full p-3 transition-all opacity-0 group-hover:opacity-100"
+      style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;"
+      aria-label="Next slide"
+      onclick="moveSlide(1)">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+
+    <!-- Indicators -->
+    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-40 flex gap-2">
+      {% for image in images %}
+        <button 
+          type="button"
+          class="carousel-indicator rounded-full transition-all"
+          style="width: 8px; height: 8px; background-color: {% if forloop.first %}white{% else %}rgba(255,255,255,0.5){% endif %}"
+          onclick="goToSlide({{ forloop.counter0 }})"
+          aria-label="Go to slide {{ forloop.counter }}"
+          data-index="{{ forloop.counter0 }}">
+        </button>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const indicators = document.querySelectorAll('.carousel-indicator');
+    const totalSlides = slides.length;
+
+    window.updateCarousel = function() {
+      slides.forEach((slide, index) => {
+        if (index === currentSlide) {
+          slide.style.opacity = '1';
+          slide.style.pointerEvents = 'auto';
+          slide.style.zIndex = '1';
+        } else {
+          slide.style.opacity = '0';
+          slide.style.pointerEvents = 'none';
+          slide.style.zIndex = '0';
+        }
+      });
+
+      indicators.forEach((indicator, index) => {
+        if (index === currentSlide) {
+          indicator.classList.add('w-6');
+          indicator.classList.remove('w-2');
+          indicator.classList.remove('bg-white/50');
+          indicator.classList.add('bg-white');
+        } else {
+          indicator.classList.remove('w-6');
+          indicator.classList.add('w-2');
+          indicator.classList.add('bg-white/50');
+          indicator.classList.remove('bg-white');
+        }
+      });
+    };
+
+    window.moveSlide = function(direction) {
+      currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+      window.updateCarousel();
+    };
+
+    window.goToSlide = function(index) {
+      currentSlide = index;
+      window.updateCarousel();
+    };
+
+    // Initialize carousel
+    if (totalSlides > 0) {
+      window.updateCarousel();
+    }
+  });
+</script>
