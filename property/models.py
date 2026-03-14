@@ -26,11 +26,13 @@ class PropertyPage(Page):
     description = RichTextField()
     benefits = StreamField([("benefit", CharBlock())], blank=True)
     type = models.CharField(max_length=50)
-    offer = models.CharField(max_length=50)
+    offer = models.CharField(
+        max_length=50, choices=[("rent", "Rent"), ("sale", "Sale"), ("lease", "Lease")]
+    )
     price = models.BigIntegerField()
     bedrooms = models.IntegerField(blank=True, null=True)
     bathrooms = models.IntegerField(blank=True, null=True)
-    size = models.IntegerField(blank=True, null=True)
+    size = models.IntegerField()
     tags = ClusterTaggableManager(through=PropertyPageTag, blank=True)
 
     def main_image(self):
@@ -68,6 +70,7 @@ class PropertyPage(Page):
     search_fields = Page.search_fields + [
         index.SearchField("description"),
         index.SearchField("benefits"),
+        index.SearchField("address"),
     ]
 
 

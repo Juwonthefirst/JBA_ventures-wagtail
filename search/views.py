@@ -1,6 +1,7 @@
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
+from django.http import HttpRequest
 from django.template.response import TemplateResponse
-
+from django.db.models import Manager
 from wagtail.models import Page
 
 # To enable logging of search queries for use with the "Promoted search results" module
@@ -44,3 +45,28 @@ def search(request):
             "search_results": search_results,
         },
     )
+
+
+def search_in_base_manager(
+    request: HttpRequest, query_manager: Manager[Page], per_page=20
+):
+    search_query = request.GET.get("query", None)
+    page = request.GET.get("page", 1)
+
+    if search_query:
+        search_results = query_manager.search(search_query)
+    else:
+        search_results = query_manager
+
+    paginator = Paginator(search_results, per_page)
+    try:
+        search_results = paginator.page(page)
+    except PageNotAnInteger:
+        search_results = paginator.page(1)
+    except EmptyPage:
+        search_results = paginator.page(paginator.num_pages)
+
+    return [
+        search_query,
+        search_results,
+    ]

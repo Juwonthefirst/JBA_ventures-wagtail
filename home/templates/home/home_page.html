@@ -1,6 +1,8 @@
-{% extends "base.html" %} {% block content %}
-
+{% extends "base.html" %} 
 {% load wagtailimages_tags %}
+
+{% block content %}
+
 {% include "./components/header.html" %}
 <main class="py-16 px-4">
   <section
@@ -27,15 +29,13 @@
   <section
     class="flex flex-col gap-20 sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-x-16 px-4 md:px-16 w-full"
   >
-    {% with properties=page.get_children %} 
-        {% if properties %}
-            {% for property in properties %} 
-                {% include "property/components/property_card.html" with property=property.specific %}
+        {% if search_results %}
+            {% for property in search_results %} 
+                {% include "property/components/property_card.html" with property=property %}
             {% endfor %}
         {% else %}
             {% include "property/components/no_property_card.html" %}
         {% endif %}
-    {% endwith %}
   </section>
 </main>
 {% endblock content %}
