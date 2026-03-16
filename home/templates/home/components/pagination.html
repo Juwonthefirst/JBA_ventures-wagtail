@@ -1,0 +1,31 @@
+<nav class="mx-auto mb-10" aria-label="Pagination">
+    <ul class="flex w-full justify-center gap-5 list-none pl-0 *:capitalize *:text-gray-700">
+        {% if subpages.has_previous %}
+            <li>
+                <a href="?page={{ subpages.previous_page_number }}" class="page-link previous arrows hover:text-accent underline">previous</a>
+            </li>
+        {% else %}
+            <li>
+                <span class="page-link text-gray-400 cursor-not-allowed">previous</span>
+            </li>
+        {% endif %}
+
+        {% for i in subpages.paginator.page_range %}
+            {% if subpages.number == i %}
+                <li><span class="font-bold text-accent">{{ i }} <span class="sr-only">(current)</span></span></li>
+            {% else %}
+                <li class="page-item"><a href="?page={{ i }}" class="page-link hover:text-accent underline">{{ i }}</a></li>
+            {% endif %}
+        {% endfor %}
+
+        {% if subpages.has_next %}
+            <li>
+                <a href="?page={{ subpages.next_page_number }}" class="page-link next arrows hover:text-accent underline">next</a>
+            </li>
+        {% else %}
+            <li>
+                <span class="page-link text-gray-400 cursor-not-allowed">next</span>
+            </li>
+        {% endif %}
+    </ul>
+</nav>

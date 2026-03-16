@@ -1,0 +1,422 @@
+[
+  {
+    "model": "property.propertypage",
+    "fields": {
+      "title": "Luxury 4-Bedroom Villa in Lekki",
+      "slug": "luxury-4-bedroom-villa-lekki",
+      "address": "22 Lekki Phase 1, Lagos",
+      "country": "Nigeria",
+      "state": "Lagos",
+      "district": "Lekki",
+      "description": "<p>Beautiful luxury villa with modern amenities, spacious living areas, and premium finishes. Perfect for families seeking comfort and style.</p>",
+      "benefits": "[{\"type\": \"benefit\", \"value\": \"Smart Home Technology\"}, {\"type\": \"benefit\", \"value\": \"Swimming Pool & Jacuzzi\"}, {\"type\": \"benefit\", \"value\": \"24/7 Security & CCTV\"}, {\"type\": \"benefit\", \"value\": \"Generator & Solar Backup\"}, {\"type\": \"benefit\", \"value\": \"Landscaped Gardens\"}]",
+      "type": "Villa",
+      "offer": "sale",
+      "price": 450000000,
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "size": 5500
+    },
+    "pk": 1
+  },
+  {
+    "model": "property.propertypage",
+    "fields": {
+      "title": "Cozy 2-Bedroom Apartment in Ikoyi",
+      "slug": "cozy-2-bedroom-apartment-ikoyi",
+      "address": "15 Bourdillon Road, Ikoyi",
+      "country": "Nigeria",
+      "state": "Lagos",
+      "district": "Ikoyi",
+      "description": "<p>Well-maintained apartment in prime location with excellent security, gym facilities, and 24/7 power supply.</p>",
+      "benefits": "[{\"type\": \"benefit\", \"value\": \"Fully Equipped Gym\"}, {\"type\": \"benefit\", \"value\": \"24/7 Power Supply\"}, {\"type\": \"benefit\", \"value\": \"Professional Security Team\"}, {\"type\": \"benefit\", \"value\": \"Premium Parking\"}, {\"type\": \"benefit\", \"value\": \"Swimming Pool Access\"}]",
+      "type": "Apartment",
+      "offer": "rent",
+      "price": 2500000,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "size": 1200
+    },
+    "pk": 2
+  },
+  {
+    "model": "property.propertypage",
+    "fields": {
+      "title": "Spacious 3-Bedroom Duplex in Victoria Island",
+      "slug": "spacious-3-bedroom-duplex-victoria-island",
+      "address": "87 Ligali Ayorinde Street, VI",
+      "country": "Nigeria",
+      "state": "Lagos",
+      "district": "Victoria Island",
+      "description": "<p>Stunning duplex in the heart of VI, perfect for executives and families. Features modern kitchen, home theater, and landscaped gardens.</p>",
+      "benefits": "[{\"type\": \"benefit\", \"value\": \"Home Theater System\"}, {\"type\": \"benefit\", \"value\": \"Modern Chef's Kitchen\"}, {\"type\": \"benefit\", \"value\": \"Manicured Gardens\"}, {\"type\": \"benefit\", \"value\": \"Prime VI Location\"}, {\"type\": \"benefit\", \"value\": \"Dual Garage\"}]",
+      "type": "Duplex",
+      "offer": "sale",
+      "price": 750000000,
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "size": 4200
+    },
+    "pk": 3
+  },
+  {
+    "model": "property.propertypage",
+    "fields": {
+      "title": "Affordable Studio Apartment in Yaba",
+      "slug": "affordable-studio-apartment-yaba",
+      "address": "45 Sule Rotimi Street, Yaba",
+      "country": "Nigeria",
+      "state": "Lagos",
+      "district": "Yaba",
+      "description": "<p>Budget-friendly studio apartment ideal for students and young professionals. Near universities and commercial centers.</p>",
+      "benefits": "[{\"type\": \"benefit\", \"value\": \"Near Universities\"}, {\"type\": \"benefit\", \"value\": \"Commercial Zone Proximity\"}, {\"type\": \"benefit\", \"value\": \"Free Wifi\"}, {\"type\": \"benefit\", \"value\": \"Laundry Facilities\"}, {\"type\": \"benefit\", \"value\": \"Secure Gate Access\"}]",
+      "type": "Studio",
+      "offer": "rent",
+      "price": 800000,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "size": 500
+    },
+    "pk": 4
+  },
+  {
+    "model": "property.propertypage",
+    "fields": {
+      "title": "Modern 5-Bedroom Terrace in Lekki Phase 2",
+      "slug": "modern-5-bedroom-terrace-lekki-phase-2",
+      "address": "5 Chevron Drive, Lekki Phase 2",
+      "country": "Nigeria",
+      "state": "Lagos",
+      "district": "Lekki",
+      "description": "<p>State-of-the-art terrace building with smart home features, solar power backup, and pool. Gated community with tight security.</p>",
+      "benefits": "[{\"type\": \"benefit\", \"value\": \"Smart Home Automation\"}, {\"type\": \"benefit\", \"value\": \"Solar Power System\"}, {\"type\": \"benefit\", \"value\": \"Resort-Style Pool\"}, {\"type\": \"benefit\", \"value\": \"Gated Community\"}, {\"type\": \"benefit\", \"value\": \"Round-the-Clock Security\"}]",
+      "type": "Terrace",
+      "offer": "sale",
+      "price": 550000000,
+      "bedrooms": 5,
+      "bathrooms": 4,
+      "size": 6000
+    },
+    "pk": 5
+  },
+  {
+    "model": "property.propertypage",
+    "fields": {
+      "title": "Premium Office Space in Kuramo",
+      "slug": "premium-office-space-kuramo",
+      "address": "12 Kuramo Close, Ikoyi",
+      "country": "Nigeria",
+      "state": "Lagos",
+      "district": "Ikoyi",
+      "description": "<p>Professional office complex suitable for corporate businesses. Equipped with conference rooms, kitchen, and high-speed internet.</p>",
+      "benefits": "[{\"type\": \"benefit\", \"value\": \"Conference Facilities\"}, {\"type\": \"benefit\", \"value\": \"High-Speed Internet\"}, {\"type\": \"benefit\", \"value\": \"Equipped Kitchen\"}, {\"type\": \"benefit\", \"value\": \"Ample Parking\"}, {\"type\": \"benefit\", \"value\": \"24/7 Building Access\"}]",
+      "type": "Office",
+      "offer": "lease",
+      "price": 5000000,
+      "bedrooms": null,
+      "bathrooms": 2,
+      "size": 2000
+    },
+    "pk": 6
+  },
+  {
+    "model": "property.propertypage",
+    "fields": {
+      "title": "Garden Cottage in Ajah",
+      "slug": "garden-cottage-ajah",
+      "address": "23 Lekki-Epe Expressway, Ajah",
+      "country": "Nigeria",
+      "state": "Lagos",
+      "district": "Ajah",
+      "description": "<p>Charming cottage with beautiful gardens, perfect for peaceful living. Close to beaches and entertainment venues.</p>",
+      "benefits": "[{\"type\": \"benefit\", \"value\": \"Lush Garden Landscape\"}, {\"type\": \"benefit\", \"value\": \"Beach Proximity\"}, {\"type\": \"benefit\", \"value\": \"Quiet Neighborhood\"}, {\"type\": \"benefit\", \"value\": \"Entertainment Venues Close By\"}, {\"type\": \"benefit\", \"value\": \"Private Entrance\"}]",
+      "type": "Cottage",
+      "offer": "rent",
+      "price": 1800000,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "size": 2800
+    },
+    "pk": 7
+  },
+  {
+    "model": "property.propertypage",
+    "fields": {
+      "title": "Commercial Plaza in Ikeja",
+      "slug": "commercial-plaza-ikeja",
+      "address": "56 Awolowo Road, Ikeja",
+      "country": "Nigeria",
+      "state": "Lagos",
+      "district": "Ikeja",
+      "description": "<p>Multi-purpose commercial plaza ideal for retail businesses, restaurants, and offices. High foot traffic location with excellent visibility.</p>",
+      "benefits": "[{\"type\": \"benefit\", \"value\": \"High Foot Traffic\"}, {\"type\": \"benefit\", \"value\": \"Excellent Visibility\"}, {\"type\": \"benefit\", \"value\": \"Multi-Purpose Units\"}, {\"type\": \"benefit\", \"value\": \"24/7 Access\"}, {\"type\": \"benefit\", \"value\": \"Professional Management\"}]",
+      "type": "Commercial",
+      "offer": "lease",
+      "price": 3500000,
+      "bedrooms": null,
+      "bathrooms": 3,
+      "size": 3500
+    },
+    "pk": 8
+  },
+  {
+    "model": "property.propertypage",
+    "fields": {
+      "title": "Beachfront Penthouse in Banana Island",
+      "slug": "beachfront-penthouse-banana-island",
+      "address": "1 Banana Island Estate, Ikoyi",
+      "country": "Nigeria",
+      "state": "Lagos",
+      "district": "Ikoyi",
+      "description": "<p>Exclusive penthouse with breathtaking ocean views, private beach access, and top-tier amenities. Residents enjoy concierge service and fine dining.</p>",
+      "benefits": "[{\"type\": \"benefit\", \"value\": \"Private Beach Access\"}, {\"type\": \"benefit\", \"value\": \"Panoramic Ocean Views\"}, {\"type\": \"benefit\", \"value\": \"Concierge Service\"}, {\"type\": \"benefit\", \"value\": \"Fine Dining Restaurant\"}, {\"type\": \"benefit\", \"value\": \"Spa & Wellness Center\"}]",
+      "type": "Penthouse",
+      "offer": "sale",
+      "price": 850000000,
+      "bedrooms": 5,
+      "bathrooms": 5,
+      "size": 7000
+    },
+    "pk": 9
+  },
+  {
+    "model": "property.propertypage",
+    "fields": {
+      "title": "2-Bedroom Flat in Apapa",
+      "slug": "2-bedroom-flat-apapa",
+      "address": "78 Wharf Road, Apapa",
+      "country": "Nigeria",
+      "state": "Lagos",
+      "district": "Apapa",
+      "description": "<p>Convenient apartment close to port and business districts. Recently renovated with new electrical and plumbing systems.</p>",
+      "benefits": "[{\"type\": \"benefit\", \"value\": \"Port Proximity\"}, {\"type\": \"benefit\", \"value\": \"Recently Renovated\"}, {\"type\": \"benefit\", \"value\": \"Modern Wiring\"}, {\"type\": \"benefit\", \"value\": \"Business District Access\"}, {\"type\": \"benefit\", \"value\": \"Reasonable Transportation\"}]",
+      "type": "Apartment",
+      "offer": "rent",
+      "price": 1200000,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "size": 900
+    },
+    "pk": 10
+  },
+  {
+    "model": "property.propertypage",
+    "fields": {
+      "title": "Executive 4-Bedroom Mansion in Oshodi",
+      "slug": "executive-4-bedroom-mansion-oshodi",
+      "address": "34 Opebi Road, Ikeja",
+      "country": "Nigeria",
+      "state": "Lagos",
+      "district": "Opebi",
+      "description": "<p>Grand mansion perfect for high-profile families or corporate entertaining. Features swimming pool, jacuzzi, home cinema, and wine cellar.</p>",
+      "benefits": "[{\"type\": \"benefit\", \"value\": \"Olympic-Size Pool\"}, {\"type\": \"benefit\", \"value\": \"Home Cinema\"}, {\"type\": \"benefit\", \"value\": \"Wine Cellar\"}, {\"type\": \"benefit\", \"value\": \"Jacuzzi\"}, {\"type\": \"benefit\", \"value\": \"Grand Entertainment Spaces\"}]",
+      "type": "Mansion",
+      "offer": "sale",
+      "price": 650000000,
+      "bedrooms": 4,
+      "bathrooms": 4,
+      "size": 5800
+    },
+    "pk": 11
+  },
+  {
+    "model": "property.propertypage",
+    "fields": {
+      "title": "Eco-Friendly 3-Bedroom House in Lekki Conservation Centre Area",
+      "slug": "eco-friendly-3-bedroom-house-lekki",
+      "address": "42 Chevron Alternative Route, Lekki",
+      "country": "Nigeria",
+      "state": "Lagos",
+      "district": "Lekki",
+      "description": "<p>Sustainable living space with solar panels, rainwater harvesting, and organic garden. Perfect for environmentally conscious families.</p>",
+      "benefits": "[{\"type\": \"benefit\", \"value\": \"Solar Power System\"}, {\"type\": \"benefit\", \"value\": \"Rainwater Harvesting\"}, {\"type\": \"benefit\", \"value\": \"Organic Garden\"}, {\"type\": \"benefit\", \"value\": \"Green Building Materials\"}, {\"type\": \"benefit\", \"value\": \"Low Carbon Footprint\"}]",
+      "type": "House",
+      "offer": "sale",
+      "price": 380000000,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "size": 3200
+    },
+    "pk": 12
+  },
+  {
+    "model": "property.propertypage",
+    "fields": {
+      "title": "Serviced Studio in Oniru",
+      "slug": "serviced-studio-oniru",
+      "address": "8 Oniru Avenue, Victoria Island",
+      "country": "Nigeria",
+      "state": "Lagos",
+      "district": "Victoria Island",
+      "description": "<p>Fully serviced studio with housekeeping, laundry, and meal services included. Ideal for corporate relocations and short-term stays.</p>",
+      "benefits": "[{\"type\": \"benefit\", \"value\": \"Housekeeping Service\"}, {\"type\": \"benefit\", \"value\": \"Daily Laundry\"}, {\"type\": \"benefit\", \"value\": \"Meal Services\"}, {\"type\": \"benefit\", \"value\": \"Corporate Friendly\"}, {\"type\": \"benefit\", \"value\": \"Flexible Lease Terms\"}]",
+      "type": "Studio",
+      "offer": "rent",
+      "price": 1500000,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "size": 600
+    },
+    "pk": 13
+  },
+  {
+    "model": "property.propertypage",
+    "fields": {
+      "title": "Land Plot in Lekki Phase 1",
+      "slug": "land-plot-lekki-phase-1",
+      "address": "Plot 5, Lekki Phase 1",
+      "country": "Nigeria",
+      "state": "Lagos",
+      "district": "Lekki",
+      "description": "<p>Prime land suitable for residential or commercial development. Located in high-growth area with excellent road network and utilities.</p>",
+      "benefits": "[{\"type\": \"benefit\", \"value\": \"Prime Location\"}, {\"type\": \"benefit\", \"value\": \"Excellent Road Network\"}, {\"type\": \"benefit\", \"value\": \"Full Utilities Available\"}, {\"type\": \"benefit\", \"value\": \"High Growth Area\"}, {\"type\": \"benefit\", \"value\": \"Development Potential\"}]",
+      "type": "Land",
+      "offer": "sale",
+      "price": 200000000,
+      "bedrooms": null,
+      "bathrooms": null,
+      "size": 2500
+    },
+    "pk": 14
+  },
+  {
+    "model": "property.propertypage",
+    "fields": {
+      "title": "Historic Bungalow in Abeokuta",
+      "slug": "historic-bungalow-abeokuta",
+      "address": "42 Ita Eko Street, Abeokuta",
+      "country": "Nigeria",
+      "state": "Ogun",
+      "district": "Abeokuta",
+      "description": "<p>Classic bungalow with historic charm in quiet neighborhood. Features wrap-around veranda perfect for entertaining and relaxation.</p>",
+      "benefits": "[{\"type\": \"benefit\", \"value\": \"Historic Architecture\"}, {\"type\": \"benefit\", \"value\": \"Wrap-Around Veranda\"}, {\"type\": \"benefit\", \"value\": \"Quiet Neighborhood\"}, {\"type\": \"benefit\", \"value\": \"Character & Charm\"}, {\"type\": \"benefit\", \"value\": \"Tree-Lined Streets\"}]",
+      "type": "Bungalow",
+      "offer": "sale",
+      "price": 85000000,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "size": 2600
+    },
+    "pk": 15
+  },
+  {
+    "model": "property.propertypage",
+    "fields": {
+      "title": "Modern Condo in Enugu",
+      "slug": "modern-condo-enugu",
+      "address": "15 Ogui Road, Enugu",
+      "country": "Nigeria",
+      "state": "Enugu",
+      "district": "Enugu",
+      "description": "<p>Contemporary condominium with elevator, parking, and recreational facilities. Excellent views of the city skyline.</p>",
+      "benefits": "[{\"type\": \"benefit\", \"value\": \"Elevator Access\"}, {\"type\": \"benefit\", \"value\": \"Covered Parking\"}, {\"type\": \"benefit\", \"value\": \"City Skyline Views\"}, {\"type\": \"benefit\", \"value\": \"Recreation Facilities\"}, {\"type\": \"benefit\", \"value\": \"Modern Architecture\"}]",
+      "type": "Condo",
+      "offer": "rent",
+      "price": 2200000,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "size": 1400
+    },
+    "pk": 16
+  },
+  {
+    "model": "property.propertypage",
+    "fields": {
+      "title": "Farm Estate in Ibadan",
+      "slug": "farm-estate-ibadan",
+      "address": "Km 25 Ibadan-Oyo Road, Ibadan",
+      "country": "Nigeria",
+      "state": "Oyo",
+      "district": "Ibadan",
+      "description": "<p>Large farm estate perfect for agricultural business or residential development. Comes with existing structures and water facilities.</p>",
+      "benefits": "[{\"type\": \"benefit\", \"value\": \"Water Facilities\"}, {\"type\": \"benefit\", \"value\": \"Existing Structures\"}, {\"type\": \"benefit\", \"value\": \"Agricultural Potential\"}, {\"type\": \"benefit\", \"value\": \"Spacious Land\"}, {\"type\": \"benefit\", \"value\": \"Development Opportunities\"}]",
+      "type": "Farm",
+      "offer": "sale",
+      "price": 120000000,
+      "bedrooms": null,
+      "bathrooms": 1,
+      "size": 25000
+    },
+    "pk": 17
+  },
+  {
+    "model": "property.propertypage",
+    "fields": {
+      "title": "Serviced Apartment Block in Abuja",
+      "slug": "serviced-apartment-block-abuja",
+      "address": "Plot 56, Zone A0, Central Business District, Abuja",
+      "country": "Nigeria",
+      "state": "Federal Capital Territory",
+      "district": "Abuja CBD",
+      "description": "<p>High-yield investment property with multiple units. Modern amenities, security, and strong rental demand in the capital city.</p>",
+      "benefits": "[{\"type\": \"benefit\", \"value\": \"Multiple Units\"}, {\"type\": \"benefit\", \"value\": \"CBD Location\"}, {\"type\": \"benefit\", \"value\": \"Strong Rental Demand\"}, {\"type\": \"benefit\", \"value\": \"Modern Amenities\"}, {\"type\": \"benefit\", \"value\": \"Professional Management\"}]",
+      "type": "Apartment Block",
+      "offer": "sale",
+      "price": 950000000,
+      "bedrooms": null,
+      "bathrooms": null,
+      "size": 8000
+    },
+    "pk": 18
+  },
+  {
+    "model": "property.propertypage",
+    "fields": {
+      "title": "Warehouse in Shomolu",
+      "slug": "warehouse-shomolu",
+      "address": "89 Ikorodu Road, Shomolu",
+      "country": "Nigeria",
+      "state": "Lagos",
+      "district": "Shomolu",
+      "description": "<p>Industrial warehouse suitable for storage or light manufacturing. High ceilings, loading dock, and 24-hour security on premises.</p>",
+      "benefits": "[{\"type\": \"benefit\", \"value\": \"High Ceilings\"}, {\"type\": \"benefit\", \"value\": \"Loading Dock\"}, {\"type\": \"benefit\", \"value\": \"24-Hour Security\"}, {\"type\": \"benefit\", \"value\": \"Spacious Floor Plan\"}, {\"type\": \"benefit\", \"value\": \"Industrial Zone Access\"}]",
+      "type": "Warehouse",
+      "offer": "lease",
+      "price": 4500000,
+      "bedrooms": null,
+      "bathrooms": 2,
+      "size": 5000
+    },
+    "pk": 19
+  },
+  {
+    "model": "property.propertypage",
+    "fields": {
+      "title": "Riverside Apartment in Ikoyi",
+      "slug": "riverside-apartment-ikoyi",
+      "address": "19 Bourdillon Road, River Bend Estate, Ikoyi",
+      "country": "Nigeria",
+      "state": "Lagos",
+      "district": "Ikoyi",
+      "description": "<p>Elegant apartment overlooking the lagoon with serene environment. Community features include tennis court and yacht club access.</p>",
+      "benefits": "[{\"type\": \"benefit\", \"value\": \"Lagoon Views\"}, {\"type\": \"benefit\", \"value\": \"Tennis Court\"}, {\"type\": \"benefit\", \"value\": \"Yacht Club Access\"}, {\"type\": \"benefit\", \"value\": \"Serene Environment\"}, {\"type\": \"benefit\", \"value\": \"Premium Location\"}]",
+      "type": "Apartment",
+      "offer": "rent",
+      "price": 3500000,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "size": 2100
+    },
+    "pk": 20
+  },
+  {
+    "model": "property.propertypage",
+    "fields": {
+      "title": "Boutique Hotel in Ikoyi",
+      "slug": "boutique-hotel-ikoyi",
+      "address": "7 Lekki Road, Ikoyi",
+      "country": "Nigeria",
+      "state": "Lagos",
+      "district": "Ikoyi",
+      "description": "<p>Upscale boutique hotel with 12 luxury suites, restaurant, and spa facilities. Prime location for hospitality business. Turn-key opportunity.</p>",
+      "benefits": "[{\"type\": \"benefit\", \"value\": \"12 Luxury Suites\"}, {\"type\": \"benefit\", \"value\": \"On-Site Restaurant\"}, {\"type\": \"benefit\", \"value\": \"Spa Facilities\"}, {\"type\": \"benefit\", \"value\": \"Turn-Key Operation\"}, {\"type\": \"benefit\", \"value\": \"Premium Location\"}]",
+      "type": "Hotel",
+      "offer": "sale",
+      "price": 380000000,
+      "bedrooms": null,
+      "bathrooms": null,
+      "size": 3600
+    },
+    "pk": 21
+  }
+]

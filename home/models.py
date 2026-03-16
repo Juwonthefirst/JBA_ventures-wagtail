@@ -21,7 +21,11 @@ class HomePage(Page):
     def get_context(self, request: HttpRequest, *args, **kwargs):
         context = super().get_context(request, *args, **kwargs)
         filter_query: dict[str, str] = {}
-        property_pages = PropertyPage.objects.live()
+        property_pages = (
+            PropertyPage.objects.live()
+            .descendant_of(self)
+            .order_by("-first_published_at")
+        )
         # add filtering for fields from query param here
         search_query, search_results = search_in_base_manager(request, property_pages)
         context["search_results"] = search_results

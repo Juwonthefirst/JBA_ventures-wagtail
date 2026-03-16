@@ -22,6 +22,10 @@ def run_tests():
     subprocess.run(["uv", "run", "manage.py", "test", "v1"])
 
 
+def load_initial_data():
+    subprocess.run(["uv", "run", "load_properties.py"])
+
+
 if __name__ == "__main__":
     if len(sys.argv) > 1:
         match (sys.argv[1]):
@@ -33,3 +37,5 @@ if __name__ == "__main__":
                 make_migrations_and_migrate()
             case "test":
                 run_tests()
+            case "load_initial_data":
+                load_initial_data()
